@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kisii Central Pentecostal Church — Official Website</title>
+  <meta name="description" content="Best Pentecostal Church in Kisii | PAG Kisii Central | Christian Community Kenya"/>
+  <meta name="keywords" content="Kisii Central Pentecostal Church, PAG Kisii Central, Christian Community Kenya, Best Church Kisii"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --onyx: #1A1A1B;
+      --onyx-light: #242425;
+      --onyx-mid: #2E2E30;
+      --gold: #D4AF37;
+      --gold-light: #E8C84A;
+      --gold-dim: #A88B28;
+      --stone: #E5E5E5;
+      --stone-dim: #999999;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--onyx);
+      color: var(--stone);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+      padding-bottom: 70px;
+    }
+
+    /* ── TOPNAV ── */
+    .topnav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 72px; padding: 0 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.4s;
+    }
+    .topnav.scrolled {
+      background: rgba(26,26,27,0.96);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(212,175,55,0.15);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
+    .nav-logo-mark {
+      width: 36px; height: 36px;
+      border: 2px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--gold); font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      position: relative;
+    }
+    .nav-logo-mark::before {
+      content: ''; position: absolute; inset: -4px;
+      border: 1px solid rgba(212,175,55,0.3);
+    }
+    .nav-logo-name { font-family: 'Playfair Display', serif; font-size: 15px; color: #fff; font-weight: 600; }
+    .nav-logo-sub { font-size: 9px; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; display: block; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-link {
+      font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--stone-dim); font-weight: 500; cursor: pointer;
+      text-decoration: none; transition: color 0.3s;
+    }
+    .nav-link:hover { color: var(--gold); }
+    .live-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3);
+      padding: 5px 12px; font-size: 10px; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold); font-weight: 700;
+    }
+    .live-dot {
+      width: 6px; height: 6px; background: #ef4444; border-radius: 50%;
+      animation: livePulse 1.5s ease-in-out infinite;
+    }
+    @keyframes livePulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    @media(max-width:768px) { .nav-links { display: none; } }
+
+    /* ── GEO PATTERN ── */
+    .geo-bg {
+      position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0;
+    }
+    .geo-bg svg {
+      position: absolute; width: 120%; height: 120%; top: -10%; left: -10%;
+      opacity: 0.04; animation: geoRotate 120s linear infinite;
+    }
+    @keyframes geoRotate { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; height: 100vh; min-height: 640px;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #0d0d0e 0%, #1A1A1B 40%, #1e1a0e 100%);
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(26,26,27,0.3) 0%, rgba(26,26,27,0.65) 50%, rgba(26,26,27,0.97) 100%);
+    }
+    /* Decorative light rays */
+    .hero-rays {
+      position: absolute; inset: 0; overflow: hidden;
+    }
+    .hero-rays::before {
+      content: '';
+      position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+      width: 2px; height: 80%;
+      background: linear-gradient(to bottom, transparent, rgba(212,175,55,0.15), transparent);
+      animation: rayPulse 4s ease-in-out infinite;
+    }
+    @keyframes rayPulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
+    .hero-content {
+      position: relative; z-index: 2;
+      text-align: center; padding: 0 24px; max-width: 900px; margin: 0 auto;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 28px;
+      animation: fadeUp 0.9s ease both;
+    }
+    .hero-eyebrow span { width: 32px; height: 1px; background: var(--gold); display: inline-block; }
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(34px, 7vw, 78px); font-weight: 700; line-height: 1.06;
+      color: #fff; animation: fadeUp 0.9s 0.2s ease both; opacity: 0;
+    }
+    .hero-h1 em { color: var(--gold); font-style: italic; }
+    .hero-sub {
+      margin-top: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(16px, 2.5vw, 22px); font-weight: 300;
+      color: rgba(229,229,229,0.7);
+      animation: fadeUp 0.9s 0.35s ease both; opacity: 0;
+    }
+    .hero-ctas {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+      margin-top: 48px; animation: fadeUp 0.9s 0.5s ease both; opacity: 0;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn-gold {
+      background: var(--gold); color: var(--onyx);
+      font-family: 'DM Sans', sans-serif; font-weight: 700;
+      font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+      padding: 16px 36px; border: none; cursor: pointer;
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+      transition: all 0.3s; text-decoration: none; display: inline-block;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent; color: var(--stone);
+      font-family: 'DM Sans', sans-serif; font-weight: 500;
+      font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+      padding: 15px 36px; border: 1px solid rgba(229,229,229,0.3);
+      cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-scroll {
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .hero-scroll-line {
+      width: 1px; height: 48px; background: var(--gold);
+      animation: scrollDrop 2s ease-in-out infinite;
+    }
+    @keyframes scrollDrop {
+      0%{opacity:0;transform:scaleY(0);transform-origin:top}
+      50%{opacity:1;transform:scaleY(1)}
+      100%{opacity:0;transform:scaleY(1);transform-origin:bottom}
+    }
+
+    /* ── SCHEDULE BAR ── */
+    .schedule-bar {
+      background: var(--onyx-light);
+      border-top: 1px solid rgba(212,175,55,0.2);
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+    }
+    .schedule-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; overflow-x: auto; scrollbar-width: none;
+    }
+    .schedule-inner::-webkit-scrollbar { display: none; }
+    .sched-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 20px 36px; white-space: nowrap; flex-shrink: 0;
+      border-right: 1px solid rgba(255,255,255,0.06);
+    }
+    .sched-item:last-child { border-right: none; }
+    .sched-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+    .sched-day { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+    .sched-time { font-size: 14px; color: var(--stone); margin-top: 2px; }
+    .sched-name { font-size: 11px; color: var(--stone-dim); margin-top: 2px; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 96px 24px; position: relative; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--gold); font-weight: 700; margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 52px); font-weight: 700;
+      color: #fff; line-height: 1.1;
+    }
+    .section-title em { color: var(--gold); font-style: italic; }
+    .section-body {
+      font-size: 16px; color: var(--stone-dim); line-height: 1.8;
+      max-width: 560px; margin-top: 16px;
+    }
+    .gold-rule { width: 60px; height: 2px; background: var(--gold); margin: 16px 0; }
+
+    /* ── SCRIPTURE ── */
+    .scripture-banner {
+      background: var(--onyx-light);
+      border-left: 3px solid var(--gold);
+      padding: 72px 48px; position: relative; overflow: hidden;
+    }
+    .scripture-mark {
+      position: absolute; top: -30px; left: 20px;
+      font-family: 'Playfair Display', serif; font-size: 220px;
+      color: var(--gold); opacity: 0.05; line-height: 1; pointer-events: none;
+    }
+    .scripture-verse {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(20px, 4vw, 38px); font-weight: 300; font-style: italic;
+      color: #fff; line-height: 1.55; position: relative; z-index: 1; max-width: 900px;
+    }
+    .scripture-ref {
+      font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-top: 20px; font-weight: 700;
+    }
+
+    /* ── PATHWAYS ── */
+    .pathways-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px; margin-top: 56px;
+    }
+    .pathway-card {
+      background: var(--onyx-light); padding: 48px 40px;
+      cursor: pointer; position: relative; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.04);
+      transition: all 0.4s;
+    }
+    .pathway-card::after {
+      content: ''; position: absolute;
+      bottom: 0; left: 0; right: 0; height: 3px;
+      background: var(--gold); transform: scaleX(0); transform-origin: left;
+      transition: transform 0.4s;
+    }
+    .pathway-card:hover::after { transform: scaleX(1); }
+    .pathway-card:hover { background: #272729; transform: translateY(-4px); }
+    .pathway-num {
+      font-family: 'Playfair Display', serif; font-size: 72px; font-weight: 700;
+      color: rgba(212,175,55,0.07); line-height: 1; margin-bottom: 20px;
+    }
+    .pathway-icon { font-size: 32px; margin-bottom: 18px; }
+    .pathway-title {
+      font-family: 'Playfair Display', serif; font-size: 24px;
+      font-weight: 600; color: #fff; margin-bottom: 12px;
+    }
+    .pathway-desc { font-size: 14px; color: var(--stone-dim); line-height: 1.7; }
+    .pathway-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 24px; font-size: 11px; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold); font-weight: 700;
+      transition: gap 0.3s;
+    }
+    .pathway-card:hover .pathway-link { gap: 14px; }
+
+    /* ── PASTOR ── */
+    .pastor-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+    }
+    @media(max-width:768px) { .pastor-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .pastor-photo-wrap { position: relative; }
+    .pastor-photo {
+      width: 100%; aspect-ratio: 3/4;
+      background: linear-gradient(160deg, #2a2510 0%, #1e1c14 50%, #1A1A1B 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 80px; position: relative; overflow: hidden;
+    }
+    .pastor-photo::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
+      background: linear-gradient(to top, var(--onyx-light), transparent);
+    }
+    .pastor-border {
+      position: absolute; top: 16px; left: 16px; right: -16px; bottom: -16px;
+      border: 1px solid rgba(212,175,55,0.25); pointer-events: none;
+    }
+    .pastor-name {
+      font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: #fff;
+    }
+    .pastor-title {
+      font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin: 6px 0 24px;
+    }
+    .pastor-bio { font-size: 15px; color: var(--stone-dim); line-height: 1.8; }
+
+    /* ── MEDIA VAULT ── */
+    .vault-section { background: var(--onyx-light); }
+    .vault-tabs { display: flex; border-bottom: 1px solid rgba(255,255,255,0.08); margin-top: 40px; }
+    .vault-tab {
+      padding: 14px 28px; font-size: 11px; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--stone-dim); cursor: pointer;
+      border: none; background: none; font-family: 'DM Sans', sans-serif;
+      font-weight: 600; border-bottom: 2px solid transparent; margin-bottom: -1px;
+      transition: all 0.3s;
+    }
+    .vault-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+    .vault-tab:hover { color: var(--stone); }
+    .vault-panel { display: none; }
+    .vault-panel.active { display: block; }
+    .vault-scroll {
+      display: flex; gap: 16px; overflow-x: auto; padding: 24px 0 16px;
+      scrollbar-width: thin; scrollbar-color: var(--gold) transparent;
+    }
+    .vault-scroll::-webkit-scrollbar { height: 3px; }
+    .vault-scroll::-webkit-scrollbar-thumb { background: var(--gold); }
+    .vault-card { flex-shrink: 0; width: 220px; cursor: pointer; transition: transform 0.3s; }
+    .vault-card:hover { transform: scale(1.04); }
+    .vault-thumb {
+      width: 100%; aspect-ratio: 16/9; border-radius: 2px;
+      overflow: hidden; position: relative;
+      display: flex; align-items: center; justify-content: center; font-size: 36px;
+    }
+    .vault-badge {
+      position: absolute; top: 8px; left: 8px;
+      background: var(--gold); color: var(--onyx);
+      font-size: 9px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px;
+    }
+    .vault-play-overlay {
+      position: absolute; inset: 0; background: rgba(0,0,0,0.3);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .vault-card:hover .vault-play-overlay { opacity: 1; }
+    .vault-play-btn {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--gold); display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--onyx);
+    }
+    .vault-card-title { font-size: 13px; font-weight: 600; color: #fff; margin-top: 10px; line-height: 1.4; }
+    .vault-card-meta { font-size: 11px; color: var(--stone-dim); margin-top: 4px; }
+
+    /* ── GIVING ── */
+    .give-section { background: var(--onyx-light); }
+    .give-card {
+      background: var(--onyx-mid); border: 1px solid rgba(212,175,55,0.2);
+      padding: 48px; max-width: 560px; margin: 48px auto 0;
+      position: relative; overflow: hidden;
+    }
+    .give-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-dim));
+    }
+    .give-title { font-family: 'Playfair Display', serif; font-size: 28px; color: #fff; margin-bottom: 6px; }
+    .give-sub { font-size: 13px; color: var(--stone-dim); margin-bottom: 28px; }
+    .give-amounts { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 20px; }
+    .amount-btn {
+      padding: 14px; background: var(--onyx-light);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--stone); font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.3s; text-align: center;
+    }
+    .amount-btn:hover, .amount-btn.active {
+      border-color: var(--gold); color: var(--gold); background: rgba(212,175,55,0.07);
+    }
+    .give-methods { display: flex; gap: 10px; margin-bottom: 20px; }
+    .method-btn {
+      flex: 1; padding: 12px; background: var(--onyx-light);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--stone); font-size: 13px; font-weight: 600;
+      cursor: pointer; text-align: center; transition: all 0.3s;
+    }
+    .method-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(212,175,55,0.07); }
+    .mpesa-box {
+      background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.15);
+      padding: 18px; margin-bottom: 20px;
+    }
+    .mpesa-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .mpesa-num { font-family: 'Playfair Display', serif; font-size: 28px; color: #fff; font-weight: 700; }
+    .mpesa-acct { font-size: 11px; color: var(--stone-dim); margin-top: 4px; }
+    .give-btn {
+      width: 100%; padding: 18px; background: var(--gold); color: var(--onyx);
+      font-family: 'DM Sans', sans-serif; font-weight: 700;
+      font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+      border: none; cursor: pointer; transition: all 0.3s;
+    }
+    .give-btn:hover { background: var(--gold-light); }
+    .give-security { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; font-size: 11px; color: var(--stone-dim); }
+
+    /* ── VISIT PAGE ── */
+    .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    @media(max-width:768px) { .visit-grid { grid-template-columns: 1fr; } }
+    .visit-map {
+      aspect-ratio: 4/3; background: var(--onyx-mid);
+      border: 1px solid rgba(212,175,55,0.15);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .map-pin { font-size: 52px; animation: bounce 2s ease-in-out infinite; }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    .map-label { font-family: 'Playfair Display', serif; font-size: 20px; color: #fff; margin-top: 12px; }
+    .map-addr { font-size: 13px; color: var(--stone-dim); margin-top: 6px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .faq-q {
+      font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600;
+      color: #fff; padding: 22px 0; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      list-style: none;
+    }
+    .faq-icon { color: var(--gold); font-size: 22px; flex-shrink: 0; transition: transform 0.3s; }
+    .faq-a {
+      font-size: 14px; color: var(--stone-dim); line-height: 1.7;
+      max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s;
+    }
+    .faq-item.open .faq-a { max-height: 200px; padding-bottom: 20px; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* ── STATS ── */
+    .stat-bar {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 1px; background: rgba(212,175,55,0.1);
+    }
+    @media(max-width:640px) { .stat-bar { grid-template-columns: repeat(2,1fr); } }
+    .stat-item { background: var(--onyx-light); padding: 36px 24px; text-align: center; }
+    .stat-num {
+      font-family: 'Playfair Display', serif; font-size: 44px;
+      font-weight: 700; color: var(--gold); line-height: 1;
+    }
+    .stat-label { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--stone-dim); margin-top: 8px; }
+
+    /* ── MINISTRIES ── */
+    .min-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2px; margin-top: 48px; }
+    .min-card {
+      background: var(--onyx-light); padding: 36px 28px; text-align: center;
+      border: 1px solid rgba(255,255,255,0.04); transition: all 0.3s; cursor: pointer;
+    }
+    .min-card:hover { background: var(--onyx-mid); border-color: rgba(212,175,55,0.2); }
+    .min-icon { font-size: 36px; margin-bottom: 14px; }
+    .min-name { font-family: 'Playfair Display', serif; font-size: 17px; color: #fff; margin-bottom: 8px; }
+    .min-desc { font-size: 12px; color: var(--stone-dim); line-height: 1.6; }
+
+    /* ── CELLS ── */
+    .cells-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 40px; }
+    .cell-card {
+      background: var(--onyx-mid); border: 1px solid rgba(255,255,255,0.06);
+      padding: 26px; transition: all 0.3s;
+    }
+    .cell-card:hover { border-color: rgba(212,175,55,0.3); }
+    .cell-area { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .cell-name { font-family: 'Playfair Display', serif; font-size: 18px; color: #fff; margin-bottom: 12px; }
+    .cell-detail { font-size: 12px; color: var(--stone-dim); margin-bottom: 5px; }
+
+    /* ── BOTTOM NAV ── */
+    .bottom-nav {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(26,26,27,0.96); backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(212,175,55,0.2);
+      display: flex; height: 70px;
+    }
+    .nav-item {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 4px;
+      cursor: pointer; border: none; background: transparent;
+      color: var(--stone-dim); font-family: 'DM Sans', sans-serif;
+      transition: color 0.3s; text-decoration: none;
+    }
+    .nav-item:hover { color: var(--gold); }
+    .nav-item.watch { color: #ef4444; }
+    .nav-item svg { width: 22px; height: 22px; }
+    .nav-item span { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
+
+    /* ── TOAST ── */
+    .toast {
+      position: fixed; bottom: 84px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: var(--onyx);
+      padding: 12px 24px; font-weight: 700; font-size: 13px;
+      z-index: 300; opacity: 0; pointer-events: none;
+      transition: opacity 0.3s; white-space: nowrap;
+    }
+    .toast.show { opacity: 1; }
+
+    /* ── PAGES ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--onyx-light); border-top: 1px solid rgba(212,175,55,0.15);
+      padding: 64px 24px 32px;
+    }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; }
+    @media(max-width:640px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand { font-family: 'Playfair Display', serif; font-size: 22px; color: #fff; margin-bottom: 12px; }
+    .footer-tagline { font-size: 13px; color: var(--stone-dim); line-height: 1.7; max-width: 300px; }
+    .footer-head { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 20px; }
+    .footer-link {
+      font-size: 13px; color: var(--stone-dim); display: block;
+      margin-bottom: 10px; cursor: pointer; transition: color 0.3s; text-decoration: none;
+    }
+    .footer-link:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07); margin-top: 48px; padding-top: 24px;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+      font-size: 11px; color: var(--stone-dim);
+    }
+
+    /* ── 3-STEP ── */
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 2px; margin-top: 48px; }
+    .step-card {
+      background: var(--onyx-mid); padding: 48px 36px;
+      border-top: 3px solid var(--gold); position: relative;
+    }
+    .step-num {
+      font-family: 'Playfair Display', serif; font-size: 64px;
+      color: rgba(212,175,55,0.08); line-height: 1; margin-bottom: 16px;
+    }
+    .step-icon { font-size: 32px; margin-bottom: 14px; }
+    .step-title { font-family: 'Playfair Display', serif; font-size: 22px; color: #fff; margin-bottom: 10px; }
+    .step-desc { font-size: 14px; color: var(--stone-dim); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+<!-- ── TOP NAV ────────────────────────────────────────────── -->
+<nav class="topnav" id="topnav">
+  <a class="nav-logo" href="#" onclick="showPage('home')">
+    <div class="nav-logo-mark">✦</div>
+    <div>
+      <div class="nav-logo-name">Kisii Central</div>
+      <span class="nav-logo-sub">Pentecostal Church</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a class="nav-link" onclick="showPage('home')">Home</a>
+    <a class="nav-link" onclick="showPage('visit')">Visit</a>
+    <a class="nav-link" onclick="showPage('sermons')">Sermons</a>
+    <a class="nav-link" onclick="showPage('ministries')">Ministries</a>
+    <a class="nav-link" onclick="showPage('cells')">Home Cells</a>
+    <a class="nav-link" onclick="showPage('give')">Give</a>
+  </div>
+  <div class="live-badge"><div class="live-dot"></div> Sunday Live</div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════
+     PAGE: HOME
+══════════════════════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="geo-bg">
+      <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="geo" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+            <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+            <polygon points="50,20 80,35 80,65 50,80 20,65 20,35" fill="none" stroke="#D4AF37" stroke-width="0.3"/>
+            <line x1="50" y1="5" x2="50" y2="95" stroke="#D4AF37" stroke-width="0.2"/>
+            <line x1="5" y1="27.5" x2="95" y2="72.5" stroke="#D4AF37" stroke-width="0.2"/>
+            <line x1="5" y1="72.5" x2="95" y2="27.5" stroke="#D4AF37" stroke-width="0.2"/>
+            <circle cx="50" cy="50" r="4" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#geo)"/>
+      </svg>
+    </div>
+    <div class="hero-rays"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span></span> Kisii Central Pentecostal Church <span></span>
+      </div>
+      <h1 class="hero-h1">
+        Experience the <em>Power of Pentecost</em><br/>in the Heart of Kisii
+      </h1>
+      <p class="hero-sub">Where every seeker finds sanctuary. Every burden finds rest. Every calling finds its fire.</p>
+      <div class="hero-ctas">
+        <a class="btn-gold" onclick="showPage('visit')">Plan Your Visit</a>
+        <a class="btn-outline" onclick="showPage('sermons')">Watch Sermons</a>
+      </div>
+    </div>
+    <div class="hero-scroll"><div class="hero-scroll-line"></div></div>
+  </section>
+
+  <!-- SCHEDULE BAR -->
+  <div class="schedule-bar">
+    <div class="schedule-inner">
+      <div class="sched-item">
+        <div class="sched-dot"></div>
+        <div>
+          <div class="sched-day">Sunday</div>
+          <div class="sched-time">8:00 AM – 12:30 PM</div>
+          <div class="sched-name">Morning Glory &amp; Main Service</div>
+        </div>
+      </div>
+      <div class="sched-item">
+        <div class="sched-dot"></div>
+        <div>
+          <div class="sched-day">Thursday</div>
+          <div class="sched-time">5:00 PM – 6:00 PM</div>
+          <div class="sched-name">Sanctuary Prayer Hour</div>
+        </div>
+      </div>
+      <div class="sched-item">
+        <div class="sched-dot"></div>
+        <div>
+          <div class="sched-day">Tuesday</div>
+          <div class="sched-time">6:00 PM</div>
+          <div class="sched-name">Home Cell Fellowships</div>
+        </div>
+      </div>
+      <div class="sched-item">
+        <div class="sched-dot"></div>
+        <div>
+          <div class="sched-day">Location</div>
+          <div class="sched-time">Nyanchwa Springs</div>
+          <div class="sched-name">Kisii Town, Kenya</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTURE 1 -->
+  <div class="scripture-banner">
+    <div class="geo-bg" style="opacity:0.5"><svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice"><defs><pattern id="geo2" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#D4AF37" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#geo2)"/></svg></div>
+    <div class="scripture-mark">"</div>
+    <blockquote class="scripture-verse">"Come to me, all who labor and are heavy laden, and I will give you rest."</blockquote>
+    <div class="scripture-ref">— Matthew 11:28 · The Invitation</div>
+  </div>
+
+  <!-- PATHWAYS -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">Discipleship</div>
+      <h2 class="section-title">Your <em>Pathway</em> Begins Here</h2>
+      <p class="section-body">From first visit to deep roots — we've built a journey for every stage of your walk with God.</p>
+      <div class="pathways-grid">
+        <div class="pathway-card" onclick="showPage('visit')">
+          <div class="pathway-num">01</div>
+          <div class="pathway-icon">🚪</div>
+          <div class="pathway-title">I'm New</div>
+          <p class="pathway-desc">Three guided steps into genuine community. No pressure, no performance — just a warm welcome and a place to belong.</p>
+          <div class="pathway-link">Explore <span>→</span></div>
+        </div>
+        <div class="pathway-card" onclick="showPage('cells')">
+          <div class="pathway-num">02</div>
+          <div class="pathway-icon">🏠</div>
+          <div class="pathway-title">Home Cells</div>
+          <p class="pathway-desc">Tuesday fellowship groups across Kisii where life-change happens in living rooms, not just sanctuaries.</p>
+          <div class="pathway-link">Explore <span>→</span></div>
+        </div>
+        <div class="pathway-card" onclick="showPage('ministries')">
+          <div class="pathway-num">03</div>
+          <div class="pathway-icon">⚡</div>
+          <div class="pathway-title">Ministries</div>
+          <p class="pathway-desc">Sunday School, Youth, Women of Valour, and Men's Ministry — find your tribe and sharpen your calling.</p>
+          <div class="pathway-link">Explore <span>→</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASTOR -->
+  <section class="section" style="background:var(--onyx-light)">
+    <div class="section-inner">
+      <div class="pastor-grid">
+        <div class="pastor-photo-wrap">
+          <div class="pastor-photo">🕊️</div>
+          <div class="pastor-border"></div>
+        </div>
+        <div>
+          <div class="section-label">Senior Leadership</div>
+          <div class="gold-rule"></div>
+          <div class="pastor-name">Ps. Ezekiel Ndubi</div>
+          <div class="pastor-title">Senior Pastor · Kisii Central Pentecostal Church</div>
+          <p class="pastor-bio">Pastor Ndubi carries a mandate for spiritual awakening in the Kisii region and beyond. His ministry is characterized by an uncompromising commitment to biblical truth, compassionate pastoral care, and apostolic authority that pierces through spiritual complacency.</p>
+          <p class="pastor-bio" style="margin-top:16px">Under his leadership, Kisii Central has grown from a small fellowship into a regional church planting movement — establishing Home Cells, raising marketplace leaders, and anchoring the community in the unshakeable Word of God.</p>
+          <a class="btn-outline" style="margin-top:32px;display:inline-block" onclick="showPage('sermons')">Watch a Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA VAULT -->
+  <section class="section vault-section">
+    <div class="section-inner">
+      <div class="section-label">Media Vault</div>
+      <h2 class="section-title">Transform Through <em>the Word</em></h2>
+      <p class="section-body">Every sermon is a precision instrument of spiritual surgery. Browse by series, encounter by encounter.</p>
+      <div class="vault-tabs">
+        <button class="vault-tab active" onclick="switchVaultTab(this,'faith')">Faith</button>
+        <button class="vault-tab" onclick="switchVaultTab(this,'stewardship')">Stewardship</button>
+        <button class="vault-tab" onclick="switchVaultTab(this,'leadership')">Leadership</button>
+      </div>
+      <div id="vault-faith" class="vault-panel active">
+        <div class="vault-scroll" id="vault-faith-scroll"></div>
+      </div>
+      <div id="vault-stewardship" class="vault-panel">
+        <div class="vault-scroll" id="vault-stewardship-scroll"></div>
+      </div>
+      <div id="vault-leadership" class="vault-panel">
+        <div class="vault-scroll" id="vault-leadership-scroll"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stat-bar">
+    <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">Years of Ministry</div></div>
+    <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Home Cell Groups</div></div>
+    <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Active Members</div></div>
+    <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Services Weekly</div></div>
+  </div>
+
+  <!-- GIVING -->
+  <section class="section give-section">
+    <div class="section-inner">
+      <div style="text-align:center">
+        <div class="section-label">Generosity</div>
+        <h2 class="section-title" style="text-align:center">Give <em>with Purpose</em></h2>
+        <p class="section-body" style="margin:16px auto;text-align:center">Your giving is a weapon of spiritual warfare and an act of Kingdom partnership.</p>
+      </div>
+      <div class="give-card">
+        <div class="give-title">Make a Contribution</div>
+        <div class="give-sub">100% secure · Fully transparent · Kingdom-purposed</div>
+        <div class="give-amounts">
+          <button class="amount-btn" onclick="selectAmount(this)">KES 200</button>
+          <button class="amount-btn active" onclick="selectAmount(this)">KES 500</button>
+          <button class="amount-btn" onclick="selectAmount(this)">KES 1,000</button>
+          <button class="amount-btn" onclick="selectAmount(this)">KES 2,500</button>
+          <button class="amount-btn" onclick="selectAmount(this)">KES 5,000</button>
+          <button class="amount-btn" onclick="selectAmount(this)">Custom</button>
+        </div>
+        <div class="give-methods">
+          <button class="method-btn active" onclick="selectMethod(this,'mpesa')">📱 M-Pesa</button>
+          <button class="method-btn" onclick="selectMethod(this,'card')">💳 Card</button>
+          <button class="method-btn" onclick="selectMethod(this,'bank')">🏦 Bank</button>
+        </div>
+        <div class="mpesa-box" id="mpesa-box">
+          <div class="mpesa-label">M-Pesa Paybill</div>
+          <div class="mpesa-num">400200</div>
+          <div class="mpesa-acct">Account: Your Full Name</div>
+        </div>
+        <button class="give-btn" onclick="showToast('✦ Thank you for your generous gift!')">Confirm M-Pesa Gift</button>
+        <div class="give-security">🔒 256-bit SSL encrypted · No card details stored</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PAGE: PLAN YOUR VISIT
+══════════════════════════════════════════════════════════════ -->
+<div id="page-visit" class="page" style="padding-top:72px">
+  <!-- Welcome -->
+  <div style="background:var(--onyx-light);padding:96px 24px 64px;position:relative;overflow:hidden">
+    <div class="geo-bg"><svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice"><defs><pattern id="geo3" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#D4AF37" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#geo3)"/></svg></div>
+    <div style="position:relative;z-index:1;max-width:800px;margin:0 auto;text-align:center">
+      <div class="section-label">Plan Your Visit</div>
+      <h1 class="section-title">You Were <em>Expected</em></h1>
+      <div class="gold-rule" style="margin:16px auto"></div>
+      <p class="section-body" style="margin:0 auto;text-align:center">Senior Pastor Ezekiel Ndubi and the entire Kisii Central family have been waiting for you.</p>
+      <div style="margin-top:48px;background:var(--onyx-mid);border:1px solid rgba(212,175,55,0.2);padding:32px;display:flex;gap:24px;align-items:center;text-align:left;max-width:500px;margin:48px auto 0">
+        <div style="width:72px;height:72px;background:linear-gradient(135deg,#2a2510,#1A1A1B);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;border:2px solid rgba(212,175,55,0.3)">👨‍💼</div>
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:20px;color:#fff">Ps. Ezekiel Ndubi</div>
+          <div style="font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px">Senior Pastor</div>
+          <p style="font-size:13px;color:var(--stone-dim);line-height:1.6;font-style:italic">"Our doors are never just open — they are flung wide in expectation of you."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Map + FAQ -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="visit-grid">
+        <div>
+          <div class="section-label">Location</div>
+          <h2 class="section-title" style="font-size:28px">Find <em>Us</em></h2>
+          <div style="height:16px"></div>
+          <div class="visit-map">
+            <div class="geo-bg"><svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice"><defs><pattern id="geo4" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#D4AF37" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#geo4)"/></svg></div>
+            <div style="position:relative;z-index:1;text-align:center">
+              <div class="map-pin">📍</div>
+              <div class="map-label">Nyanchwa Springs</div>
+              <div class="map-addr">Kisii Town, Kisii County, Kenya</div>
+              <a class="btn-gold" style="margin-top:24px;font-size:11px;display:inline-block" href="https://maps.google.com" target="_blank">Open in Maps</a>
+            </div>
+          </div>
+          <div style="margin-top:20px;display:flex;gap:16px;flex-wrap:wrap">
+            <span style="font-size:12px;color:var(--stone-dim)">🚗 Secure Parking</span>
+            <span style="font-size:12px;color:var(--stone-dim)">♿ Accessible</span>
+            <span style="font-size:12px;color:var(--stone-dim)">👶 Nursery</span>
+            <span style="font-size:12px;color:var(--stone-dim)">📶 Free Wi-Fi</span>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">What to Expect</div>
+          <h2 class="section-title" style="font-size:28px">Common <em>Questions</em></h2>
+          <div style="height:16px"></div>
+          <div id="faq-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 3 Steps -->
+  <section class="section" style="background:var(--onyx-light)">
+    <div class="section-inner">
+      <div style="text-align:center">
+        <div class="section-label">Next Steps</div>
+        <h2 class="section-title" style="text-align:center">Your <em>3-Step</em> Journey In</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card"><div class="step-num">01</div><div class="step-icon">🚶</div><div class="step-title">Just Arrive</div><p class="step-desc">Come to any Sunday service. You need nothing but yourself. We will handle the rest.</p></div>
+        <div class="step-card"><div class="step-num">02</div><div class="step-icon">📋</div><div class="step-title">Connect Card</div><p class="step-desc">Fill a simple Connect Card so our welcome team can reach out with next steps tailored to your story.</p></div>
+        <div class="step-card"><div class="step-num">03</div><div class="step-icon">🌱</div><div class="step-title">New Members Class</div><p class="step-desc">Join our monthly Foundations class — a one-day journey into the DNA of Kisii Central and your faith.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="scripture-banner">
+    <div class="scripture-mark">"</div>
+    <blockquote class="scripture-verse">"For I was a stranger and you welcomed me."</blockquote>
+    <div class="scripture-ref">— Matthew 25:35</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PAGE: SERMONS
+══════════════════════════════════════════════════════════════ -->
+<div id="page-sermons" class="page" style="padding-top:72px">
+  <section class="section vault-section">
+    <div class="section-inner">
+      <div class="section-label">Sermon Archive</div>
+      <h1 class="section-title">The Media <em>Vault</em></h1>
+      <div class="gold-rule"></div>
+      <p class="section-body">Every message a precision instrument. Every series a journey into the deeper life.</p>
+      <div class="vault-tabs">
+        <button class="vault-tab active" onclick="switchVaultTab2(this,'s-faith')">Faith</button>
+        <button class="vault-tab" onclick="switchVaultTab2(this,'s-stewardship')">Stewardship</button>
+        <button class="vault-tab" onclick="switchVaultTab2(this,'s-leadership')">Leadership</button>
+      </div>
+      <div id="s-faith" class="vault-panel active"><div class="vault-scroll" id="s-faith-scroll"></div></div>
+      <div id="s-stewardship" class="vault-panel"><div class="vault-scroll" id="s-stewardship-scroll"></div></div>
+      <div id="s-leadership" class="vault-panel"><div class="vault-scroll" id="s-leadership-scroll"></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PAGE: MINISTRIES
+══════════════════════════════════════════════════════════════ -->
+<div id="page-ministries" class="page" style="padding-top:72px">
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">Ministries</div>
+      <h1 class="section-title">Find Your <em>Tribe</em></h1>
+      <div class="gold-rule"></div>
+      <p class="section-body">Every member is called to something greater than themselves. Our ministries are the launchpads of that calling.</p>
+      <div class="min-grid">
+        <div class="min-card"><div class="min-icon">📚</div><div class="min-name">Sunday School</div><p class="min-desc">Biblical formation for children ages 3–12, taught with creativity and love.</p></div>
+        <div class="min-card"><div class="min-icon">⚡</div><div class="min-name">Youth Ministry</div><p class="min-desc">Equipping the next generation to lead — in their schools, families, and nation. Ages 13–25.</p></div>
+        <div class="min-card"><div class="min-icon">🦁</div><div class="min-name">Men of Valour</div><p class="min-desc">Brotherhood, accountability, and the sharpening of men for their God-given roles.</p></div>
+        <div class="min-card"><div class="min-icon">💎</div><div class="min-name">Women of Valour</div><p class="min-desc">A sisterhood of strength — building women of purpose, prayer, and prophetic vision.</p></div>
+        <div class="min-card"><div class="min-icon">🎵</div><div class="min-name">Worship Team</div><p class="min-desc">Cultivating an atmosphere where Heaven and Earth intersect every Sunday.</p></div>
+        <div class="min-card"><div class="min-icon">🙏</div><div class="min-name">Intercession</div><p class="min-desc">The engine room of the church. Carrying every soul before the throne of grace.</p></div>
+        <div class="min-card"><div class="min-icon">🤝</div><div class="min-name">Ushers & Protocol</div><p class="min-desc">First impressions of eternity. Our welcome team embodies radical hospitality.</p></div>
+        <div class="min-card"><div class="min-icon">📹</div><div class="min-name">Media Ministry</div><p class="min-desc">Capturing and broadcasting the move of God to Kisii and beyond.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PAGE: HOME CELLS
+══════════════════════════════════════════════════════════════ -->
+<div id="page-cells" class="page" style="padding-top:72px">
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">Home Cells</div>
+      <h1 class="section-title">Tuesday <em>Fellowship</em> Groups</h1>
+      <div class="gold-rule"></div>
+      <p class="section-body">Transformation happens in proximity. Every Tuesday, our cells gather across Kisii for prayer, the Word, and genuine life-sharing.</p>
+      <div class="cells-grid" id="cells-grid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PAGE: GIVE
+══════════════════════════════════════════════════════════════ -->
+<div id="page-give" class="page" style="padding-top:72px">
+  <section class="section give-section">
+    <div class="section-inner">
+      <div style="text-align:center">
+        <div class="section-label">Generosity</div>
+        <h1 class="section-title" style="text-align:center">Give <em>with Purpose</em></h1>
+        <p class="section-body" style="margin:16px auto;text-align:center">Your giving is a weapon of spiritual warfare and an act of Kingdom partnership. Every shilling seeds transformation.</p>
+      </div>
+      <div class="give-card">
+        <div class="give-title">Make a Contribution</div>
+        <div class="give-sub">100% secure · Fully transparent · Kingdom-purposed</div>
+        <div class="give-amounts">
+          <button class="amount-btn" onclick="selectAmount(this)">KES 200</button>
+          <button class="amount-btn active" onclick="selectAmount(this)">KES 500</button>
+          <button class="amount-btn" onclick="selectAmount(this)">KES 1,000</button>
+          <button class="amount-btn" onclick="selectAmount(this)">KES 2,500</button>
+          <button class="amount-btn" onclick="selectAmount(this)">KES 5,000</button>
+          <button class="amount-btn" onclick="selectAmount(this)">Custom</button>
+        </div>
+        <div class="give-methods">
+          <button class="method-btn active" onclick="selectMethod(this,'mpesa2')">📱 M-Pesa</button>
+          <button class="method-btn" onclick="selectMethod(this,'card2')">💳 Card</button>
+          <button class="method-btn" onclick="selectMethod(this,'bank2')">🏦 Bank</button>
+        </div>
+        <div class="mpesa-box" id="mpesa-box2">
+          <div class="mpesa-label">M-Pesa Paybill</div>
+          <div class="mpesa-num">400200</div>
+          <div class="mpesa-acct">Account: Your Full Name</div>
+        </div>
+        <button class="give-btn" onclick="showToast('✦ Thank you for your generous gift!')">Confirm M-Pesa Gift</button>
+        <div class="give-security">🔒 256-bit SSL encrypted · No card details stored</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER (shared)
+══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">✦ Kisii Central Pentecostal Church</div>
+        <p class="footer-tagline">Rooted in the Word. Empowered by the Spirit. Sent into the world. Nyanchwa Springs, Kisii Town, Kenya.</p>
+        <div style="margin-top:24px;display:flex;gap:10px">
+          <span style="background:var(--onyx-mid);border:1px solid rgba(212,175,55,0.15);padding:8px 14px;font-size:11px;color:var(--stone-dim);cursor:pointer">Facebook</span>
+          <span style="background:var(--onyx-mid);border:1px solid rgba(212,175,55,0.15);padding:8px 14px;font-size:11px;color:var(--stone-dim);cursor:pointer">YouTube</span>
+          <span style="background:var(--onyx-mid);border:1px solid rgba(212,175,55,0.15);padding:8px 14px;font-size:11px;color:var(--stone-dim);cursor:pointer">WhatsApp</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-head">Quick Links</div>
+        <a class="footer-link" onclick="showPage('home')">Home</a>
+        <a class="footer-link" onclick="showPage('visit')">Plan Your Visit</a>
+        <a class="footer-link" onclick="showPage('sermons')">Sermon Vault</a>
+        <a class="footer-link" onclick="showPage('cells')">Home Cells</a>
+        <a class="footer-link" onclick="showPage('give')">Give Online</a>
+      </div>
+      <div>
+        <div class="footer-head">Service Times</div>
+        <span class="footer-link" style="cursor:default">Sunday 8:00 AM – 12:30 PM</span>
+        <span class="footer-link" style="cursor:default">Morning Glory & Main Service</span>
+        <div style="height:8px"></div>
+        <span class="footer-link" style="cursor:default">Thursday 5:00 – 6:00 PM</span>
+        <span class="footer-link" style="cursor:default">Sanctuary Prayer Hour</span>
+        <div style="height:8px"></div>
+        <span class="footer-link" style="cursor:default">+254 700 000 000</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Kisii Central Pentecostal Church. All Rights Reserved.</span>
+      <span>Designed for the Kingdom · Built for the City</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════
+     BOTTOM NAV
+══════════════════════════════════════════════════════════════ -->
+<nav class="bottom-nav">
+  <a class="nav-item" href="https://maps.google.com" target="_blank">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    <span>Directions</span>
+  </a>
+  <button class="nav-item" onclick="showPage('give')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <span>Give</span>
+  </button>
+  <button class="nav-item watch" onclick="showToast('📡 Live stream starts Sunday 8:00 AM EAT')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16" fill="currentColor"/></svg>
+    <span>Watch Live</span>
+  </button>
+  <a class="nav-item" href="tel:+254700000000">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.9l1.43-1.43a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    <span>Call</span>
+  </a>
+</nav>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+  // ── DATA ──────────────────────────────────────────────────
+  const SERMONS = {
+    faith: [
+      { title:'The Currency of Heaven', series:'Faith Foundations', dur:'52 min', emoji:'🕊️', bg:'#1a2535', badge:'NEW' },
+      { title:'Mountains Shall Move', series:'Faith Foundations', dur:'44 min', emoji:'⛰️', bg:'#1a1f35' },
+      { title:'Unshakeable Trust', series:'Faith Foundations', dur:'61 min', emoji:'🌿', bg:'#1a2520' },
+      { title:'Faith in the Fire', series:'Daniel Series', dur:'48 min', emoji:'🔥', bg:'#2a1a10' },
+    ],
+    stewardship: [
+      { title:'Kingdom Economics', series:'Financial Stewardship', dur:'58 min', emoji:'📖', bg:'#251a35', badge:'SERIES' },
+      { title:'Breaking the Poverty Spirit', series:'Financial Stewardship', dur:'63 min', emoji:'💡', bg:'#2a2510' },
+      { title:'The Tithe Covenant', series:'Financial Stewardship', dur:'41 min', emoji:'✨', bg:'#1a2530' },
+      { title:'Generosity as Warfare', series:'Financial Stewardship', dur:'55 min', emoji:'⚔️', bg:'#251a20' },
+    ],
+    leadership: [
+      { title:'Servant King Principle', series:'Leadership', dur:'67 min', emoji:'👑', bg:'#2a1e10', badge:'POPULAR' },
+      { title:'The Weight of Calling', series:'Leadership', dur:'49 min', emoji:'🌟', bg:'#1a1a30' },
+      { title:'Vision & Execution', series:'Leadership', dur:'53 min', emoji:'🎯', bg:'#1a2a1a' },
+      { title:'Raising the Next Generation', series:'Leadership', dur:'72 min', emoji:'🌱', bg:'#1a2020' },
+    ],
+  };
+
+  const FAQS = [
+    { q:'What should I wear?', a:'Come exactly as you are — our community is built on radical welcome. Whether in your Sunday best or casual clothes, you belong here.' },
+    { q:'Is there parking available?', a:'Yes! We have secure, monitored onsite parking at the Nyanchwa Springs sanctuary. Parking is free for all services and events.' },
+    { q:'What about my children?', a:'Our Sunday School runs concurrently with the main service for children aged 3–12, taught by trained, loving volunteers in a secure environment.' },
+    { q:'How long is the service?', a:'Morning Glory begins at 8:00 AM and the Main Service runs until 12:30 PM. You\'re welcome to join any part of the service.' },
+    { q:'I\'m not a Christian — can I still come?', a:'Absolutely. We welcome every seeker, skeptic, and curious soul. No pressure, no judgment — just a community seeking truth together.' },
+  ];
+
+  const CELLS = [
+    { area:'Nyanchwa', name:'Springs of Life Cell', host:'Br. Samuel Odhiambo', time:'Tue 6:00 PM', members:12 },
+    { area:'Milimani', name:'Covenant Community Cell', host:'Sis. Grace Kemunto', time:'Tue 5:30 PM', members:9 },
+    { area:'Town Centre', name:'Marketplace Cell', host:'Br. James Ongeri', time:'Tue 7:00 PM', members:15 },
+    { area:'Hospital Zone', name:'Healing Hearts Cell', host:'Sis. Purity Moraa', time:'Tue 6:30 PM', members:11 },
+    { area:'Daraja Mbili', name:'River of Life Cell', host:'Br. David Momanyi', time:'Tue 6:00 PM', members:8 },
+    { area:'Gachie Estate', name:'Cornerstone Cell', host:'Sis. Faith Nyaboke', time:'Tue 5:00 PM', members:14 },
+  ];
+
+  // ── BUILD SERMON CARDS ────────────────────────────────────
+  function buildSermonCards(containerId, cat) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    el.innerHTML = SERMONS[cat].map(s => `
+      <div class="vault-card" onclick="showToast('▶ Playing: ${s.title}')">
+        <div class="vault-thumb" style="background:${s.bg}">
+          <span>${s.emoji}</span>
+          ${s.badge ? `<div class="vault-badge">${s.badge}</div>` : ''}
+          <div class="vault-play-overlay"><div class="vault-play-btn">▶</div></div>
+        </div>
+        <div class="vault-card-title">${s.title}</div>
+        <div class="vault-card-meta">${s.series} · ${s.dur}</div>
+      </div>
+    `).join('');
+  }
+
+  // ── BUILD FAQ ─────────────────────────────────────────────
+  function buildFAQ() {
+    const el = document.getElementById('faq-list');
+    if (!el) return;
+    el.innerHTML = FAQS.map((f, i) => `
+      <div class="faq-item" id="faq-${i}">
+        <div class="faq-q" onclick="toggleFaq(${i})">
+          ${f.q} <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">${f.a}</div>
+      </div>
+    `).join('');
+  }
+
+  function toggleFaq(i) {
+    document.querySelectorAll('.faq-item').forEach((el, idx) => {
+      if (idx === i) el.classList.toggle('open');
+      else el.classList.remove('open');
+    });
+  }
+
+  // ── BUILD CELLS ───────────────────────────────────────────
+  function buildCells() {
+    const el = document.getElementById('cells-grid');
+    if (!el) return;
+    el.innerHTML = CELLS.map(c => `
+      <div class="cell-card">
+        <div class="cell-area">${c.area}</div>
+        <div class="cell-name">${c.name}</div>
+        <div class="cell-detail">👤 ${c.host}</div>
+        <div class="cell-detail">🕐 ${c.time}</div>
+        <div class="cell-detail">👥 ${c.members} members</div>
+        <button class="btn-gold" style="margin-top:16px;font-size:10px;padding:10px 20px" onclick="showToast('✦ Request sent to join ${c.name}!')">Join This Cell</button>
+      </div>
+    `).join('');
+  }
+
+  // ── PAGE ROUTING ──────────────────────────────────────────
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + id);
+    if (target) { target.classList.add('active'); window.scrollTo(0, 0); }
+  }
+
+  // ── VAULT TABS ────────────────────────────────────────────
+  function switchVaultTab(btn, panelId) {
+    btn.closest('.section-inner').querySelectorAll('.vault-tab').forEach(t => t.classList.remove('active'));
+    btn.closest('.section-inner').querySelectorAll('.vault-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(panelId).classList.add('active');
+  }
+  function switchVaultTab2(btn, panelId) { switchVaultTab(btn, panelId); }
+
+  // ── GIVING INTERACTIONS ───────────────────────────────────
+  function selectAmount(btn) {
+    btn.closest('.give-amounts').querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  function selectMethod(btn, boxId) {
+    btn.closest('.give-methods').querySelectorAll('.method-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const box1 = document.getElementById('mpesa-box');
+    const box2 = document.getElementById('mpesa-box2');
+    if (box1) box1.style.display = boxId === 'mpesa' ? 'block' : 'none';
+    if (box2) box2.style.display = boxId === 'mpesa2' ? 'block' : 'none';
+  }
+
+  // ── TOAST ─────────────────────────────────────────────────
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3000);
+  }
+
+  // ── TOPNAV SCROLL ─────────────────────────────────────────
+  window.addEventListener('scroll', () => {
+    document.getElementById('topnav').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // ── INIT ──────────────────────────────────────────────────
+  ['faith','stewardship','leadership'].forEach(cat => {
+    buildSermonCards('vault-' + cat + '-scroll', cat);
+    buildSermonCards('s-' + cat + '-scroll', cat);
+  });
+  buildFAQ();
+  buildCells();
+</script>
+</body>
+</html>
